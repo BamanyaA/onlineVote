@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <style>
+        body{
+            background-color: grey;
+            width: 100%;
+            height: 80%;
+          
+            font-family: sans-serif;
+            color: black;  
+
+        }
+         .login{
+            width:500px;
+            margin: auto;
+            background-color: white;
+            border-radius: 30px;
+            padding-bottom: 20px;
+        }
+        
+        h1{
+            text-align: center;
+            padding-top: 10px;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            color: wheat;
+
+        }
+         h3{
+            text-align: center;
+            padding-top: 10px;
+            
+
+        }
+        form{
+            width: 360px;
+            margin-left: 20px;
+            
+        }
+        form label{
+            display: flex;
+            margin-left: 20px;
+            padding-top: 10px;
+
+        }
+        form input{
+            width: 80%;
+            border: none;
+            border: 1px solid gray;
+            outline: none;
+           
+            height: 30px;
+            border-radius: 30px;
+            text-indent: 10px;
+            
+        }
+        .group select{
+            margin-left: 20px;
+            padding-top: 10px;
+            width: 80%;
+            
+            margin-bottom: 21px;
+            text-align: end;
+            background-color: white;
+            border-top: 0%;
+            color: black;
+        
+        }
+        #button{
+            width: 30%;
+            background-color:orange;
+            text-align: center;
+            font-style: italic;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+        #button:hover{
+            background-color: aquamarine;
+            width: 30%;
+           
+
+        }
+        #link{
+            color: green;
+            font-style: italic;
+
+        }
+        #link:hover{
+            background-color: red;
+
+        }
+    </style>
+</head>
+<body>
+    <form action="../backend/login.php" class="login" method="post" name="form" id="myform">
+    <h1>Signin into your account </h1>
+    <h3>Fill the required details <h3>
+     <div class="one">
+    <label>Username:</label>
+    <input type="text" placeholder="Please enter your username" name="email" id="myname"required>
+</div>
+       <div class="one">
+    <label>Password:</label>
+    <input type="password" placeholder="please enter your passowrd" name="password" id="mypsd" required>
+</div>
+<div class="one">
+    <label>Social Security Number:</label>
+    <input type="text" placeholder="please enter your ssl" name="security" id="myssl"required>
+</div>
+      <div class="group">
+      <label>Group:</label>
+    <select name="std">
+        <option value="candidate">Candidate</option>
+        <option value="voter">Voter</option>
+    </select>
+    </div>
+       
+      <input type="submit" id = "button" value="Login" name="username">
+      <p>Dont have an Account? <a id = "link" href="../allpages/registration.html"> Register here</a></p>
+      
+    </form>
+</body>
+</html>
